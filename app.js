@@ -59,15 +59,15 @@
 //    let click = document.querySelector('button')
 //     click.addEventListener("#click", charLength)
 
-var pokeName = document.getElementById('pokeName')
-var pokeNum = document.getElementById('pokeNum')
-var pokePower = document.getElementById('pokePower')
-var pokeHeight = document.getElementById('pokeName')
-var pokeWeight = document.getElementById('pokeNum')
-var pokeType = document.getElementById('pokeType')
-var pokeImage = document.getElementById('pokeNum')
+let pokeName = document.getElementById('pokeName')
+let pokeNum = document.getElementById('pokeNum')
+let pokePower = document.getElementById('pokePower')
+let pokeHeight = document.getElementById('pokeName')
+let pokeWeight = document.getElementById('pokeNum')
+let pokeType = document.getElementById('pokeType')
+let pokeImage = document.getElementById('pokeNum')
 
-var btn = document.getElementById("subButton")
+let btn = document.getElementById("subButton")
 
 
     function loadPoke() {
