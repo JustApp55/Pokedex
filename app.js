@@ -7,8 +7,7 @@ let pokeWeight = document.getElementById('pokeNum')
 let pokeType = document.getElementById('pokeType')
 let pokeFrontImg = document.getElementById('pokeFrontImg')
 let pokeBackImg = document.getElementById('pokeBackImg')
-let pokeShinyFrontImg = document.getElementById('pokeShinyFrontImg')
-let pokeShinyBackImg = document.getElementById('pokeShinyBackImg')
+
 
 let btn = document.getElementById("subButton")
 
@@ -30,9 +29,9 @@ let btn = document.getElementById("subButton")
                 pokeWeight.textContent = "Pokemon Weight: " + data.weight;
                 pokeHeight.textContent = "Pokemon Height: " + data.height;
                 pokeType.textContent = data.types[0].type.name;
+                pokeFrontImg.setAttribute('src', `${data.sprites.front_default}`)
                 pokeBackImg.setAttribute('src', `${data.sprites.back_default}`)
-                pokeShinyFrontImg.setAttribute('src', `${data.sprites.front_shiny}`)
-                pokeShinyBackImg.setAttribute('src', `${data.sprites.back_shiny}`)
+                
                 inputName.value = null
             
             })
@@ -44,3 +43,36 @@ let btn = document.getElementById("subButton")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    //let pokeShinyFrontImg = document.getElementById('pokeShinyFrontImg')
+//let pokeShinyBackImg = document.getElementById('pokeShinyBackImg')
+
+//pokeShinyFrontImg.setAttribute('src', `${data.sprites.front_shiny}`)
+                //pokeShinyBackImg.setAttribute('src', `${data.sprites.back_shiny}`)
