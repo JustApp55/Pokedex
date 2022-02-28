@@ -1,0 +1,39 @@
+body {
+    background-image: url(https://cdn.dribbble.com/users/127779/screenshots/3419471/media/5eeaf1afddd12b7651da58021278a9a8.gif);     
+	/* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #0fddad); */
+	/* background-size: 400% 400%; */
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+	margin: 0;
+	font-family: rubik;
+}
+
+.container {
+    width: 700px;
+    height: 600px;
+    padding: 10px; 
+    margin: auto;
+    border: 5px solid rgb(132, 132, 120);
+    background-color: rgb(43, 174, 239); 
+    position:relative; top: 100px;
+ } 
+
+ p {
+    text-align: center;
+    color: rgb(2, 6, 6);
+    font-size: x-large;
+}
+
+input {
+    display: block;
+   margin: auto;
+   border: 2px solid rgb(186, 179, 171);
+}
+
+button {
+    display: block;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(134, 113, 7);
+}
