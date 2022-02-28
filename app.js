@@ -5,15 +5,18 @@ let pokePower = document.getElementById('pokePower')
 let pokeHeight = document.getElementById('pokeName')
 let pokeWeight = document.getElementById('pokeNum')
 let pokeType = document.getElementById('pokeType')
-let pokeImage = document.getElementById('pokeNum')
+let pokeFrontImg = document.getElementById('pokeFrontImg')
+let pokeBackImg = document.getElementById('pokeBackImg')
+let pokeShinyFrontImg = document.getElementById('pokeShinyFrontImg')
+let pokeShinyBackImg = document.getElementById('pokeShinyBackImg')
 
 let btn = document.getElementById("subButton")
 
 
     function loadPoke() {
-            let inputName = document.getElementById("#pokeInput").value;
+            let inputName = document.getElementById("pokeInput");
             //     //get the data from the url/api 
-            fetch(`https://pokeapi.co/api/v2/pokemon/${inputName}`)
+            fetch(`https://pokeapi.co/api/v2/pokemon/${inputName.value}`)
 
             //handle the response/reject promise using .then
             .then((res)=> {
@@ -21,13 +24,16 @@ let btn = document.getElementById("subButton")
                 })
           
             .then((data) => {  
-                pokeName.textContent = data.name;
-                pokeNum.textContent = data.id; 
-                pokePower.textContent = data.abilities[0].ability.name
-                pokeWeight.textContent = data.weight;
-                pokeHeight.textContent = data.height;
+                pokeName.textContent = "Pokemon Name: " + data.name;
+                pokeNum.textContent = "Pokemon ID: " + data.id; 
+                pokePower.textContent = "Pokemon Ability: " + data.abilities[0].ability.name
+                pokeWeight.textContent = "Pokemon Weight: " + data.weight;
+                pokeHeight.textContent = "Pokemon Height: " + data.height;
                 pokeType.textContent = data.types[0].type.name;
-                pokeImage.setAttribute('src', `${data.sprites.front_default}`)
+                pokeBackImg.setAttribute('src', `${data.sprites.back_default}`)
+                pokeShinyFrontImg.setAttribute('src', `${data.sprites.front_shiny}`)
+                pokeShinyBackImg.setAttribute('src', `${data.sprites.back_shiny}`)
+                inputName.value = null
             
             })
     }
