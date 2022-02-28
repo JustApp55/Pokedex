@@ -23,7 +23,7 @@ let btn = document.getElementById("subButton")
                 })
           
             .then((data) => {  
-                pokeName.textContent = "Pokemon Name: " + data.name;
+                pokeName.textContent = "PokeName: " + data.name;
                 pokeNum.textContent = "Pokemon ID: " + data.id; 
                 pokePower.textContent = "Pokemon Ability: " + data.abilities[0].ability.name
                 pokeWeight.textContent = "Pokemon Weight: " + data.weight;
@@ -32,7 +32,6 @@ let btn = document.getElementById("subButton")
                 pokeFrontImg.setAttribute('src', `${data.sprites.front_default}`)
                 pokeBackImg.setAttribute('src', `${data.sprites.back_default}`)
                 
-                inputName.value = null
             
             })
     }
@@ -67,7 +66,7 @@ let btn = document.getElementById("subButton")
 
 
 
-    
+
 
 
 
